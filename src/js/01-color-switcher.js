@@ -11,8 +11,11 @@ let intervalId = null;
     intervalId = setInterval(() => {
       document.body.style.backgroundColor = getRandomHexColor();
     }, 1000);
+
+    startButton.disabled = true;
   });
 
   stopButton.addEventListener('click', () => {
     clearInterval(intervalId);
+    startButton.disabled = false;
   });
